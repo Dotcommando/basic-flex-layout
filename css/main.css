@@ -1,0 +1,90 @@
+html {
+    background-color: #eeeee8;
+    font-family: trebuchet, geneva, sans-serif;
+}
+body {
+    background-color: #deded8;
+    margin: 0;
+}
+header {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header, footer {
+    flex: 0 0 content;
+}
+main {
+    flex: 1;
+}
+article, aside, footer, header {
+    padding: 8px;
+    box-sizing: border-box;
+}
+aside {
+    background: linear-gradient(to bottom, white 50%, #deded8 80%);
+}
+nav {
+    display: flex;
+}
+footer {
+    color: white;
+    background-color: #333;
+}
+main nav {
+    flex-flow: column;
+    background: linear-gradient(to bottom, #ccc 50%, #deded8 80%);
+}
+nav a {
+    text-align: center;
+    background: #ccc;
+    color: black;
+}
+nav a:hover {
+    outline: 1px solid #bbb;
+    color: red;
+    text-decoration: underline;
+}
+main nav a {
+    line-height: 3;
+    border-bottom: #aaa solid 1px;
+    margin-bottom: 1px;
+}
+footer nav a {
+    margin: 0 5px;
+    padding: 5px 0;
+    text-decoration: none;
+    flex: auto;
+}
+footer p {
+    text-align: center;
+}
+footer p a {
+    color: #aaa;
+}
+/* larger screen */
+@media screen and (min-width: 480px) {
+    body {
+        max-width: 1200px;
+        margin: auto;
+    }
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+    article {
+        flex: 60%;
+    }
+    main nav,
+    aside {
+        flex: 20%;
+    }
+}
+
